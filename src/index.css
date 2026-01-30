@@ -1,0 +1,320 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* LiveSitter Design System - Premium B2B SaaS */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+@layer base {
+  :root {
+    /* Core brand - Deep ocean blue */
+    --primary: 266 4% 20.8%;
+    --primary-foreground: 248 0.3% 98.4%;
+
+    /* Backgrounds */
+    --background: 0 0% 100%;
+    --foreground: 265 4% 12.9%;
+
+    /* Cards and surfaces */
+    --card: 0 0% 100%;
+    --card-foreground: 265 4% 12.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 265 4% 12.9%;
+
+    /* Secondary - Subtle slate */
+    --secondary: 248 0.7% 96.8%;
+    --secondary-foreground: 266 4% 20.8%;
+
+    /* Muted elements */
+    --muted: 248 0.7% 96.8%;
+    --muted-foreground: 257 4.6% 55.4%;
+
+    /* Accent - Soft teal for compliance/success */
+    --accent: 248 0.7% 96.8%;
+    --accent-foreground: 266 4% 20.8%;
+
+    /* Success state */
+    --success: 158 60% 42%;
+    --success-foreground: 0 0% 100%;
+
+    /* Warning state */
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    /* Destructive */
+    --destructive: 27 24.5% 57.7%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders and inputs */
+    --border: 256 1.3% 92.9%;
+    --input: 256 1.3% 92.9%;
+    --ring: 257 4% 70.4%;
+
+    --radius: 0.375rem;
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 265 4% 12.9%;
+    --sidebar-primary: 266 4% 20.8%;
+    --sidebar-primary-foreground: 248 0.3% 98.4%;
+    --sidebar-accent: 248 0.7% 96.8%;
+    --sidebar-accent-foreground: 266 4% 20.8%;
+    --sidebar-border: 256 1.3% 92.9%;
+    --sidebar-ring: 257 4% 70.4%;
+    --chart-1: 41 22.2% 64.6%;
+    --chart-2: 185 11.8% 60%;
+    --chart-3: 227 7% 39.8%;
+    --chart-4: 84 18.9% 82.8%;
+    --chart-5: 70 18.8% 76.9%;
+    --sidebar: 248 0.3% 98.4%;
+    --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+    --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+    --shadow-sm: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
+    --shadow: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
+    --shadow-md: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.1);
+    --shadow-lg: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 4px 6px -1px hsl(0 0% 0% / 0.1);
+    --shadow-xl: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 8px 10px -1px hsl(0 0% 0% / 0.1);
+    --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
+    --tracking-normal: 0em;
+    --spacing: 0.25rem;
+  }
+  .dark {
+    --background: 0 0% 15%;
+    --foreground: 248 0.3% 98.4%;
+    --card: 266 4% 20.8%;
+    --card-foreground: 248 0.3% 98.4%;
+    --popover: 266 4% 20.8%;
+    --popover-foreground: 248 0.3% 98.4%;
+    --primary: 256 1.3% 92.9%;
+    --primary-foreground: 266 4% 20.8%;
+    --secondary: 260 4.1% 27.9%;
+    --secondary-foreground: 248 0.3% 98.4%;
+    --muted: 260 4.1% 27.9%;
+    --muted-foreground: 257 4% 70.4%;
+    --accent: 260 4.1% 27.9%;
+    --accent-foreground: 248 0.3% 98.4%;
+    --border: 0 0% 100% / 10%;
+    --input: 0 0% 100% / 15%;
+    --ring: 264 2.7% 55.1%;
+    --destructive: 22 19.1% 70.4%;
+    --destructive-foreground: 248 0.3% 98.4%;
+    --chart-1: 264 24.3% 48.8%;
+    --chart-2: 162 17% 69.6%;
+    --chart-3: 70 18.8% 76.9%;
+    --chart-4: 304 26.5% 62.7%;
+    --chart-5: 16 24.6% 64.5%;
+    --sidebar: 266 4% 20.8%;
+    --sidebar-foreground: 248 0.3% 98.4%;
+    --sidebar-primary: 264 24.3% 48.8%;
+    --sidebar-primary-foreground: 248 0.3% 98.4%;
+    --sidebar-accent: 260 4.1% 27.9%;
+    --sidebar-accent-foreground: 248 0.3% 98.4%;
+    --sidebar-border: 0 0% 100% / 10%;
+    --sidebar-ring: 264 2.7% 55.1%;
+    --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+    --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+    --shadow-sm: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
+    --shadow: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
+    --shadow-md: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.1);
+    --shadow-lg: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 4px 6px -1px hsl(0 0% 0% / 0.1);
+    --shadow-xl: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 8px 10px -1px hsl(0 0% 0% / 0.1);
+    --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight text-foreground;
+  }
+}
+
+@layer components {
+  /* Premium button styles */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-sm transition-all duration-200 hover:bg-primary/90 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground shadow-sm transition-all duration-200 hover:bg-secondary hover:border-primary/20 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground;
+  }
+
+  /* Card variants */
+  .card-elevated {
+    @apply rounded-xl bg-card p-6 shadow-sm border border-border/50 transition-all duration-200 hover:shadow-md hover:border-border;
+  }
+
+  .card-feature {
+    @apply rounded-2xl bg-card p-8 shadow-sm border border-border/50;
+  }
+
+  /* Section spacing */
+  .section-padding {
+    @apply py-12 md:py-16 lg:py-20;
+  }
+
+  /* Container */
+  .container-narrow {
+    @apply mx-auto max-w-5xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-wide {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Typography */
+  .text-display {
+    @apply text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1];
+  }
+
+  .text-headline {
+    @apply text-3xl sm:text-4xl font-bold tracking-tight;
+  }
+
+  .text-subheadline {
+    @apply text-lg sm:text-xl text-muted-foreground leading-relaxed;
+  }
+
+  /* Badge */
+  .badge {
+    @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-medium;
+  }
+
+  .badge-primary {
+    @apply badge bg-primary/10 text-primary;
+  }
+
+  .badge-success {
+    @apply badge bg-success/10 text-success;
+  }
+
+  /* Form inputs */
+  .input-field {
+    @apply w-full rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all;
+  }
+
+  .label-field {
+    @apply block text-sm font-medium text-foreground mb-2;
+  }
+
+  /* Spec card for product page */
+  .spec-card {
+    @apply rounded-xl border border-border bg-card p-6;
+  }
+
+  .spec-card-title {
+    @apply text-sm font-semibold text-primary uppercase tracking-wide mb-4;
+  }
+
+  .spec-list {
+    @apply space-y-3;
+  }
+
+  .spec-item {
+    @apply flex items-start gap-3 text-sm text-foreground;
+  }
+
+  /* Dashboard preview styles */
+  .dashboard-card {
+    @apply rounded-lg bg-card border border-border p-4 shadow-sm;
+  }
+
+  .dashboard-stat {
+    @apply text-3xl font-bold text-foreground;
+  }
+
+  .dashboard-label {
+    @apply text-xs font-medium text-muted-foreground uppercase tracking-wide;
+  }
+
+  /* Step indicator */
+  .step-number {
+    @apply flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground text-sm font-bold;
+  }
+
+  /* Compliance indicator */
+  .compliance-badge {
+    @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold;
+  }
+
+  .compliance-ok {
+    @apply compliance-badge bg-success/10 text-success;
+  }
+
+  .compliance-warning {
+    @apply compliance-badge bg-warning/10 text-warning;
+  }
+
+  .compliance-alert {
+    @apply compliance-badge bg-destructive/10 text-destructive;
+  }
+}
+
+@layer utilities {
+  /* Subtle animations */
+  .animate-fade-up {
+    animation: fadeUp 0.5s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.4s ease-out forwards;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Stagger delays for lists */
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+
+  /* Gradient text */
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+}
