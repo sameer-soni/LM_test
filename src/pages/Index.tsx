@@ -21,7 +21,7 @@
 
 
 import React from 'react';
-import { Shield, Users, FileCheck, Lock, Zap, Building2, Waves, GraduationCap, Check, ArrowRight, TrendingUp, AlertCircle, Clock, Download } from 'lucide-react';
+import { Shield, Users, FileCheck, Lock, Zap, Building2, Waves, GraduationCap, Check, ArrowRight, TrendingUp, AlertCircle, Clock, Download, Landmark } from 'lucide-react';
 
 export default function Index() {
   const [selectedModel, setSelectedModel] = React.useState<'wired' | 'wireless'>('wired');
@@ -31,7 +31,7 @@ export default function Index() {
       wired: {
         label: 'Wired',
         name: 'Livesitter Mini (Wired)',
-        image: '/cam1.jpg',
+        image: '/rgbSensor.jpeg',
         description:
           'Permanent installs for classrooms and fixed rooms. Reliable power and set-and-forget deployment.',
         bullets: ['Wall-mounted in minutes', 'Wired power (PoE or USB‑C)', 'Best for always-on spaces'],
@@ -60,7 +60,7 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 bg-slate-900 rounded flex items-center justify-center">
-              <Users className="w-5 h-5 text-white" strokeWidth={2} />
+              <span className="text-white font-bold text-lg">L</span>
             </div>
             <span className="text-lg font-semibold tracking-tight">Livesitter Mini</span>
           </div>
@@ -70,9 +70,6 @@ export default function Index() {
             <a href="#technology" className="hover:text-slate-900 transition-colors">Technology</a>
           </div>
           <div className="flex items-center gap-3">
-            <button className="hidden md:block px-4 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">
-              Sign In
-            </button>
             <button className="px-5 py-2.5 bg-slate-900 text-white text-sm font-medium hover:bg-slate-800 transition-colors rounded">
               Book Demo
             </button>
@@ -96,9 +93,9 @@ export default function Index() {
               </div>
 
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold mb-6 tracking-tight leading-[1.05] anim-fade-up delay-2">
-                Continuous classroom counts.
+                Continuous classroom visibility.
                 <br />
-                Clear compliance.
+                Clear safety & compliance.
               </h1>
 
               <p className="text-xl text-slate-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0 anim-fade-up delay-3">
@@ -211,44 +208,13 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Social Proof - Like Slack/Mixpanel */}
-      <section className="py-16 px-6 bg-white border-y border-slate-100">
-        <div className="max-w-7xl mx-auto">
-          <p className="text-sm font-medium text-slate-500 text-center mb-8">
-            Trusted by compliance-focused facilities
-          </p>
-
-          <div className="relative overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
-            <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-slate-50 to-transparent" />
-            <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-slate-50 to-transparent" />
-
-            <div className="p-6">
-              <div className="marquee">
-                <div className="marquee-track opacity-70">
-                  {[
-                    'School Districts',
-                    'Childcare Operators',
-                    'Recreation Centers',
-                    'Aquatics Facilities',
-                    'Compliance Teams',
-                    'Multi-site Operators',
-                    'School Districts',
-                    'Childcare Operators',
-                    'Recreation Centers',
-                    'Aquatics Facilities',
-                    'Compliance Teams',
-                    'Multi-site Operators',
-                  ].map((label, i) => (
-                    <div
-                      key={`${label}-${i}`}
-                      className="shrink-0 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-600"
-                    >
-                      {label}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+      {/* Trust Badge */}
+      <section className="py-12 px-6 bg-white border-y border-slate-100">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="inline-block px-6 py-3 bg-slate-900 rounded-xl">
+            <p className="text-lg md:text-xl font-bold text-white">
+              Trusted by 400+ safety and compliance focused facilities nationwide
+            </p>
           </div>
         </div>
       </section>
@@ -256,65 +222,122 @@ export default function Index() {
       {/* Product Models - Two Column */}
       <section id="product" className="py-24 px-6 bg-white">
       <div className="max-w-screen-xl mx-auto">
-        <div className="mb-16">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight text-slate-900">
-            Choose <br /><span className="text-slate-400">wired or wireless.</span>
+        <div className="mb-12 text-center">
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-slate-900">
+            Choose <span className="text-slate-400">wired or wireless.</span>
           </h2>
-          <p className="text-xl text-slate-600 max-w-2xl">
-            Two sensor options for different installs: permanent wired deployments or flexible wireless placement.
-          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 h-[340px] md:h-[380px] lg:h-[400px]">
-          {/* Wired Model - Image Background */}
-          <div className="group relative rounded-3xl overflow-hidden cursor-pointer shadow-2xl">
-            {/* Background Image Placeholder - Replace with your high-res asset */}
-            <div className="absolute inset-0 bg-slate-900">
-              <img 
-                src="/cam1.jpg" 
-                alt="Wired Installation" 
-                className="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
-              />
-            </div>
+        <div className="grid md:grid-cols-2 gap-8">
+          {/* Wired Model */}
+          <div className="flex flex-col">
+            <div className="group relative rounded-3xl overflow-hidden cursor-pointer shadow-2xl h-[300px] md:h-[340px]">
+              <div className="absolute inset-0 bg-slate-900">
+                <img 
+                  src="/rgbSensor.jpeg" 
+                  alt="Wired Installation" 
+                  className="w-full h-full object-cover -translate-y-5 opacity-70 group-hover:scale-105 transition-transform duration-700"
+                />
+              </div>
 
-            <div className="absolute top-6 left-6 md:top-8 md:left-8 z-10 inline-flex items-center rounded-full bg-white/10 backdrop-blur-md border border-white/20 px-3 py-1 text-xs font-semibold text-white">
-              WIRED
+              <div className="absolute top-6 left-6 md:top-8 md:left-8 z-10 inline-flex items-center rounded-full bg-white/10 backdrop-blur-md border border-white/20 px-3 py-1 text-xs font-semibold text-white">
+                WIRED
+              </div>
+              
+              <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 bg-gradient-to-t from-slate-900 via-slate-900/10 to-transparent">
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Model S</h3>
+
+                <button className="inline-flex items-center gap-2 w-fit px-4 py-2 bg-white text-slate-900 text-sm font-semibold rounded-lg hover:bg-slate-100 transition-colors">
+                  Book a Demo
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+              </div>
             </div>
             
-            {/* Overlay Content */}
-            <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 bg-gradient-to-t from-slate-900 via-slate-900/10 to-transparent">
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Model S</h3>
-
-              <button className="inline-flex items-center gap-2 w-fit px-4 py-2 bg-white text-slate-900 text-sm font-semibold rounded-lg hover:bg-slate-100 transition-colors">
-                Book a Demo
-                <ArrowRight className="w-4 h-4" />
-              </button>
+            {/* Wired Pros & Cons */}
+            <div className="mt-6 grid grid-cols-2 gap-4">
+              <div className="bg-emerald-50 rounded-xl p-4 border border-emerald-100">
+                <div className="text-xs font-bold text-emerald-700 uppercase tracking-wide mb-3">Pros</div>
+                <ul className="space-y-2 text-sm text-slate-700">
+                  <li className="flex items-start gap-2">
+                    <Check className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" />
+                    <span>Always-on power</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" />
+                    <span>Zero battery maintenance</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="bg-amber-50 rounded-xl p-4 border border-amber-100">
+                <div className="text-xs font-bold text-amber-700 uppercase tracking-wide mb-3">Cons</div>
+                <ul className="space-y-2 text-sm text-slate-700">
+                  <li className="flex items-start gap-2">
+                    <AlertCircle className="w-4 h-4 text-amber-600 mt-0.5 flex-shrink-0" />
+                    <span>Higher install effort - Requires cabling</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <AlertCircle className="w-4 h-4 text-amber-600 mt-0.5 flex-shrink-0" />
+                    <span>Less flexible repositioning</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
 
-          {/* Wireless Model - Image Background */}
-          <div className="group relative rounded-3xl overflow-hidden cursor-pointer shadow-2xl">
-            {/* Background Image Placeholder */}
-            <div className="absolute inset-0 bg-slate-800">
-              <img 
-                src="/cam3.jpg" 
-                alt="Wireless Installation" 
-                className="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
-              />
-            </div>
+          {/* Wireless Model */}
+          <div className="flex flex-col">
+            <div className="group relative rounded-3xl overflow-hidden cursor-pointer shadow-2xl h-[300px] md:h-[340px]">
+              <div className="absolute inset-0 bg-slate-800">
+                <img 
+                  src="/cam3.jpg" 
+                  alt="Wireless Installation" 
+                  className="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
+                />
+              </div>
 
-            <div className="absolute top-6 left-6 md:top-8 md:left-8 z-10 inline-flex items-center rounded-full bg-white/10 backdrop-blur-md border border-white/20 px-3 py-1 text-xs font-semibold text-white">
-              WIRELESS
+              <div className="absolute top-6 left-6 md:top-8 md:left-8 z-10 inline-flex items-center rounded-full bg-white/10 backdrop-blur-md border border-white/20 px-3 py-1 text-xs font-semibold text-white">
+                WIRELESS
+              </div>
+              
+              <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 bg-gradient-to-t from-slate-900 via-slate-900/10 to-transparent">
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Model A</h3>
+
+                <button className="inline-flex items-center gap-2 w-fit px-4 py-2 bg-white text-slate-900 text-sm font-semibold rounded-lg hover:bg-slate-100 transition-colors">
+                  Book a Demo
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+              </div>
             </div>
             
-            {/* Overlay Content */}
-            <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 bg-gradient-to-t from-slate-900 via-slate-900/10 to-transparent">
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Model A</h3>
-
-              <button className="inline-flex items-center gap-2 w-fit px-4 py-2 bg-white text-slate-900 text-sm font-semibold rounded-lg hover:bg-slate-100 transition-colors">
-                Book a Demo
-                <ArrowRight className="w-4 h-4" />
-              </button>
+            {/* Wireless Pros & Cons */}
+            <div className="mt-6 grid grid-cols-2 gap-4">
+              <div className="bg-emerald-50 rounded-xl p-4 border border-emerald-100">
+                <div className="text-xs font-bold text-emerald-700 uppercase tracking-wide mb-3">Pros</div>
+                <ul className="space-y-2 text-sm text-slate-700">
+                  <li className="flex items-start gap-2">
+                    <Check className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" />
+                    <span>Faster installation - No cabling required</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" />
+                    <span>Flexible placement across rooms</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="bg-amber-50 rounded-xl p-4 border border-amber-100">
+                <div className="text-xs font-bold text-amber-700 uppercase tracking-wide mb-3">Cons</div>
+                <ul className="space-y-2 text-sm text-slate-700">
+                  <li className="flex items-start gap-2">
+                    <AlertCircle className="w-4 h-4 text-amber-600 mt-0.5 flex-shrink-0" />
+                    <span>Battery management required</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <AlertCircle className="w-4 h-4 text-amber-600 mt-0.5 flex-shrink-0" />
+                    <span>Requires periodic maintenance checks</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -326,118 +349,151 @@ export default function Index() {
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-50 border border-emerald-200 rounded-full mb-6">
-              <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
-              <span className="text-sm font-semibold text-emerald-700">Trusted by 50+ Facilities</span>
-            </div>
             <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight text-slate-900">
-              One sensor. <span className="text-slate-400">Every space.</span>
+              One device. <span className="text-slate-400">Every space.</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              Real-time people counting and ratio monitoring across classrooms, pools, and childcare without storing video or compromising privacy.
+              LiveSitter Mini deploys across classrooms and activity areas to detect unattended children, monitor adult-child ratios, and flag safety risks in real time.
             </p>
           </div>
 
           {/* Solutions Cards */}
-          <div className="grid md:grid-cols-3 gap-6">
-            {/* Schools Card */}
-            <div className="group relative rounded-3xl overflow-hidden bg-slate-900 h-[480px] cursor-pointer shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
-              <img 
-                src="/solutions-school.png" 
-                alt="Schools" 
-                className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent" />
-              
-              {/* Stats Badge */}
-              <div className="absolute top-6 left-6 flex items-center gap-2 px-3 py-1.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
-                <GraduationCap className="w-4 h-4 text-white" />
-                <span className="text-xs font-semibold text-white">K-12 & Higher Ed</span>
+          <div className="relative">
+            {/* Ambient glow behind cards - suggests "always monitoring" */}
+            <div className="absolute inset-0 -inset-x-8 -inset-y-8 pointer-events-none">
+              <div className="ambient-glow absolute top-1/2 left-1/4 w-64 h-64 rounded-full" style={{ animationDelay: '0s' }} />
+              <div className="ambient-glow absolute top-1/3 right-1/4 w-48 h-48 rounded-full" style={{ animationDelay: '2s' }} />
+              <div className="ambient-glow absolute bottom-1/4 left-1/2 w-56 h-56 rounded-full" style={{ animationDelay: '4s' }} />
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
+            {/* Center-Based Childcare Card */}
+            <div className="solution-card group relative rounded-2xl overflow-hidden h-[320px] cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl" style={{ animationDelay: '0ms' }}>
+              <div className="absolute inset-0 bg-slate-900">
+                <img 
+                  src="/solutions-childcare.png" 
+                  alt="Center-Based Childcare" 
+                  className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700"
+                />
               </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent" />
+              
+              {/* Shimmer effect - auto loops */}
+              <div className="absolute inset-0 shimmer-auto" style={{ animationDelay: '0s' }} />
               
               {/* Content */}
-              <div className="absolute inset-x-0 bottom-0 p-8">
-                <div className="flex items-baseline gap-3 mb-4">
-                  <span className="text-5xl font-bold text-white">20+</span>
-                  <span className="text-sm font-medium text-slate-300">rooms per sensor</span>
+              <div className="absolute inset-x-0 bottom-0 p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 flex items-center justify-center">
+                    <Building2 className="w-5 h-5 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white">Center-Based Childcare</h3>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-3">Schools & Universities</h3>
-                <p className="text-slate-300 leading-relaxed mb-6">
-                  Automatically track student-to-teacher ratios in classrooms, gyms, and common areas. Get instant alerts when thresholds are exceeded.
+                <p className="text-slate-300 text-sm leading-relaxed mb-4">
+                  Monitor unattended children, child-to-caregiver ratios across classrooms.
                 </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-xs font-medium text-white border border-white/20">Classroom monitoring</span>
-                  <span className="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-xs font-medium text-white border border-white/20">Adult detection</span>
-                  <span className="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-xs font-medium text-white border border-white/20">Ratio alerts</span>
+                <div className="flex items-center gap-2 text-white/70 text-sm font-medium group-hover:text-white transition-colors">
+                  <span>Learn more</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
             </div>
 
-            {/* Pools Card */}
-            <div className="group relative rounded-3xl overflow-hidden bg-slate-900 h-[480px] cursor-pointer shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
-              <img 
-                src="/solutions-pool.png" 
-                alt="Swimming Facilities" 
-                className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent" />
-              
-              {/* Stats Badge */}
-              <div className="absolute top-6 left-6 flex items-center gap-2 px-3 py-1.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
-                <Waves className="w-4 h-4 text-white" />
-                <span className="text-xs font-semibold text-white">Aquatics</span>
+            {/* K-5 Elementary Schools Card */}
+            <div className="solution-card group relative rounded-2xl overflow-hidden h-[320px] cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl" style={{ animationDelay: '100ms' }}>
+              <div className="absolute inset-0 bg-slate-900">
+                <img 
+                  src="/solutions-school.png" 
+                  alt="K-5 Elementary Schools" 
+                  className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700"
+                />
               </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent" />
+              
+              {/* Shimmer effect - auto loops */}
+              <div className="absolute inset-0 shimmer-auto" style={{ animationDelay: '1.5s' }} />
               
               {/* Content */}
-              <div className="absolute inset-x-0 bottom-0 p-8">
-                <div className="flex items-baseline gap-3 mb-4">
-                  <span className="text-5xl font-bold text-white">100%</span>
-                  <span className="text-sm font-medium text-slate-300">coverage accuracy</span>
+              <div className="absolute inset-x-0 bottom-0 p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 flex items-center justify-center">
+                    <GraduationCap className="w-5 h-5 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white">K-5 Elementary</h3>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-3">Swimming Facilities</h3>
-                <p className="text-slate-300 leading-relaxed mb-6">
-                  Count swimmers in real-time. Ensure lifeguard-to-swimmer ratios meet safety standards before capacity is exceeded.
+                <p className="text-slate-300 text-sm leading-relaxed mb-4">
+                  Monitor occupancy and adult-to-student ratios across classrooms and shared spaces.
                 </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-xs font-medium text-white border border-white/20">Swimmer counting</span>
-                  <span className="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-xs font-medium text-white border border-white/20">Capacity limits</span>
-                  <span className="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-xs font-medium text-white border border-white/20">Safety alerts</span>
+                <div className="flex items-center gap-2 text-white/70 text-sm font-medium group-hover:text-white transition-colors">
+                  <span>Learn more</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
             </div>
 
-            {/* Childcare Card */}
-            <div className="group relative rounded-3xl overflow-hidden bg-slate-900 h-[480px] cursor-pointer shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
-              <img 
-                src="/solutions-childcare.png" 
-                alt="Childcare Centers" 
-                className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent" />
-              
-              {/* Stats Badge */}
-              <div className="absolute top-6 left-6 flex items-center gap-2 px-3 py-1.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
-                <Building2 className="w-4 h-4 text-white" />
-                <span className="text-xs font-semibold text-white">Childcare</span>
+            {/* Swimming Facilities Card */}
+            <div className="solution-card group relative rounded-2xl overflow-hidden h-[320px] cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl" style={{ animationDelay: '200ms' }}>
+              <div className="absolute inset-0 bg-slate-900">
+                <img 
+                  src="/solutions-pool.png" 
+                  alt="Swimming Facilities" 
+                  className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700"
+                />
               </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent" />
+              
+              {/* Shimmer effect - auto loops */}
+              <div className="absolute inset-0 shimmer-auto" style={{ animationDelay: '3s' }} />
               
               {/* Content */}
-              <div className="absolute inset-x-0 bottom-0 p-8">
-                <div className="flex items-baseline gap-3 mb-4">
-                  <span className="text-5xl font-bold text-white">24/7</span>
-                  <span className="text-sm font-medium text-slate-300">compliance logs</span>
+              <div className="absolute inset-x-0 bottom-0 p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 flex items-center justify-center">
+                    <Waves className="w-5 h-5 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white">Swimming Facilities</h3>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-3">Childcare Centers</h3>
-                <p className="text-slate-300 leading-relaxed mb-6">
-                  Monitor child-to-caregiver ratios by age group. Generate audit-ready reports automatically for licensing inspections.
+                <p className="text-slate-300 text-sm leading-relaxed mb-4">
+                  Monitor occupancy and safety ratios across aquatic facilities.
                 </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-xs font-medium text-white border border-white/20">Age-based ratios</span>
-                  <span className="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-xs font-medium text-white border border-white/20">Audit reports</span>
-                  <span className="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-xs font-medium text-white border border-white/20">FERPA safe</span>
+                <div className="flex items-center gap-2 text-white/70 text-sm font-medium group-hover:text-white transition-colors">
+                  <span>Learn more</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
             </div>
+
+            {/* Government Card */}
+            <div className="solution-card group relative rounded-2xl overflow-hidden h-[320px] cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl" style={{ animationDelay: '300ms' }}>
+              <div className="absolute inset-0 bg-slate-900">
+                <img 
+                  src="/solutions-school.png" 
+                  alt="Government Facilities" 
+                  className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent" />
+              
+              {/* Shimmer effect - auto loops */}
+              <div className="absolute inset-0 shimmer-auto" style={{ animationDelay: '4.5s' }} />
+              
+              {/* Content */}
+              <div className="absolute inset-x-0 bottom-0 p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 flex items-center justify-center">
+                    <Landmark className="w-5 h-5 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white">Government</h3>
+                </div>
+                <p className="text-slate-300 text-sm leading-relaxed mb-4">
+                  Occupancy monitoring for public buildings, courthouses, and municipal facilities.
+                </p>
+                <div className="flex items-center gap-2 text-white/70 text-sm font-medium group-hover:text-white transition-colors">
+                  <span>Learn more</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            </div>
+          </div>
           </div>
 
           {/* Bottom CTA */}
@@ -756,12 +812,12 @@ export default function Index() {
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <div className="w-7 h-7 bg-slate-900 rounded flex items-center justify-center">
-                  <Users className="w-4 h-4 text-white" strokeWidth={2} />
+                  <span className="text-white font-bold text-sm">L</span>
                 </div>
                 <span className="font-semibold">Livesitter Mini</span>
               </div>
               <p className="text-sm text-slate-600">
-                Privacy-first compliance monitoring for educational and recreational facilities.
+                Privacy-first safety & compliance monitoring for educational and recreational facilities.
               </p>
             </div>
             <div>
@@ -926,13 +982,91 @@ export default function Index() {
           }
         }
 
+        /* Solution card animations */
+        .solution-card {
+          animation: cardFadeIn 0.6s ease-out both;
+        }
+
+        @keyframes cardFadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .icon-float {
+          animation: iconFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes iconFloat {
+          0%, 100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-4px);
+          }
+        }
+
+        .shimmer-auto {
+          background: linear-gradient(
+            105deg,
+            transparent 30%,
+            rgba(255, 255, 255, 0.08) 50%,
+            transparent 70%
+          );
+          background-size: 300% 100%;
+          animation: shimmerLoop 4.5s ease-in-out infinite;
+        }
+
+        @keyframes shimmerLoop {
+          0%, 20% {
+            background-position: 200% 0;
+            opacity: 0;
+          }
+          30% {
+            opacity: 1;
+          }
+          50% {
+            background-position: -200% 0;
+            opacity: 1;
+          }
+          60%, 100% {
+            background-position: -200% 0;
+            opacity: 0;
+          }
+        }
+
+        .ambient-glow {
+          background: radial-gradient(circle, rgba(100, 116, 139, 0.15) 0%, transparent 70%);
+          filter: blur(40px);
+          animation: ambientPulse 6s ease-in-out infinite;
+        }
+
+        @keyframes ambientPulse {
+          0%, 100% {
+            opacity: 0.3;
+            transform: scale(1) translate(0, 0);
+          }
+          50% {
+            opacity: 0.6;
+            transform: scale(1.2) translate(10px, -10px);
+          }
+        }
+
         @media (prefers-reduced-motion: reduce) {
           .hero-ambient {
             animation: none !important;
           }
 
           .anim-fade-up,
-          .anim-fade-up-float {
+          .anim-fade-up-float,
+          .solution-card,
+          .icon-float,
+          .shimmer-overlay {
             opacity: 1;
             transform: none;
             animation: none;
