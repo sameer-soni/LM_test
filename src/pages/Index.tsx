@@ -25,6 +25,7 @@ import { Shield, Users, FileCheck, Lock, Zap, Building2, Waves, GraduationCap, C
 
 export default function Index() {
   const [selectedModel, setSelectedModel] = React.useState<'wired' | 'wireless'>('wired');
+  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
 
   const selectedProduct = React.useMemo(() => {
     const products = {
@@ -69,12 +70,41 @@ export default function Index() {
             <a href="/pricing" className="hover:text-[#2A6363] transition-colors">Pricing</a>
             <a href="/faq" className="hover:text-[#2A6363] transition-colors">FAQ</a>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-3">
             <a href="/contact" className="px-5 py-2.5 bg-[#2A6363] text-white text-sm font-medium hover:bg-[#1D4E4E] transition-colors rounded">
               Book Demo
             </a>
           </div>
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden p-2 -mr-2 text-[#2D2D2D]"
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
+          </button>
         </div>
+        {/* Mobile Menu Panel */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-[#FAF8F5] border-t border-[#2A6363]/10 px-6 py-4">
+            <div className="flex flex-col gap-4">
+              <a href="/how-it-works" className="text-sm font-medium text-[#2D2D2D] hover:text-[#2A6363]">How It Works</a>
+              <a href="/pricing" className="text-sm font-medium text-[#2D2D2D] hover:text-[#2A6363]">Pricing</a>
+              <a href="/faq" className="text-sm font-medium text-[#2D2D2D] hover:text-[#2A6363]">FAQ</a>
+              <a href="/contact" className="px-4 py-2.5 bg-[#2A6363] text-white text-sm font-medium rounded text-center">
+                Book Demo
+              </a>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section with Dashboard Preview */}
@@ -118,7 +148,7 @@ export default function Index() {
               <div className="relative anim-fade-up-float delay-3">
                 <div className="absolute -inset-8 bg-gradient-to-r from-[#2A6363]/20 via-[#3D7A7A]/20 to-[#2A6363]/20 blur-3xl opacity-70" />
 
-                <div className="relative bg-white rounded-2xl shadow-2xl border border-[#2A6363]/10 overflow-hidden min-w-[420px]">
+                <div className="relative bg-white rounded-2xl shadow-2xl border border-[#2A6363]/10 overflow-hidden w-full">
                   {/* Top bar */}
                   <div className="px-5 py-3 border-b border-slate-100 flex items-center justify-between bg-slate-50/50">
                     <div className="flex items-center gap-3">
