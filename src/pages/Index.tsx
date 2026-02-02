@@ -41,7 +41,7 @@ export default function Index() {
       wireless: {
         label: 'Wireless',
         name: 'Livesitter Mini (Wireless)',
-        image: '/cam3.jpg',
+        image: '/lorawan.png',
         description:
           'Flexible placement for temporary setups and evolving layouts. Move it as your spaces change.',
         bullets: ['Fast placement (no cabling)', 'Easy to reposition', 'Great for multi-use areas'],
@@ -54,31 +54,31 @@ export default function Index() {
   }, [selectedModel]);
 
   return (
-    <div className="bg-white text-slate-900">
+    <div className="bg-[#FAF8F5] text-[#1A1A1A]">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-100">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#FAF8F5]/95 backdrop-blur-sm border-b border-[#2A6363]/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-slate-900 rounded flex items-center justify-center">
+            <div className="w-8 h-8 bg-[#2A6363] rounded flex items-center justify-center">
               <span className="text-white font-bold text-lg">L</span>
             </div>
             <span className="text-lg font-semibold tracking-tight">Livesitter Mini</span>
           </div>
-          <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
-            <a href="#product" className="hover:text-slate-900 transition-colors">Product</a>
-            <a href="#solutions" className="hover:text-slate-900 transition-colors">Solutions</a>
-            <a href="#technology" className="hover:text-slate-900 transition-colors">Technology</a>
+          <div className="hidden md:flex items-center gap-8 text-sm font-medium text-[#2D2D2D]/70">
+            <a href="/how-it-works" className="hover:text-[#2A6363] transition-colors">How It Works</a>
+            <a href="/pricing" className="hover:text-[#2A6363] transition-colors">Pricing</a>
+            <a href="/faq" className="hover:text-[#2A6363] transition-colors">FAQ</a>
           </div>
           <div className="flex items-center gap-3">
-            <button className="px-5 py-2.5 bg-slate-900 text-white text-sm font-medium hover:bg-slate-800 transition-colors rounded">
+            <a href="/contact" className="px-5 py-2.5 bg-[#2A6363] text-white text-sm font-medium hover:bg-[#1D4E4E] transition-colors rounded">
               Book Demo
-            </button>
+            </a>
           </div>
         </div>
       </nav>
 
       {/* Hero Section with Dashboard Preview */}
-      <section className="relative pt-32 pb-20 pl-6 pr-6 lg:pr-0 bg-gradient-to-b from-white to-slate-50">
+      <section className="relative pt-32 pb-20 pl-6 pr-6 lg:pr-0 bg-gradient-to-b from-[#FAF8F5] to-[#F0EFEB]">
         {/* Ambient background motion (decorative) */}
         <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
           <div className="hero-ambient hero-ambient-1" />
@@ -88,7 +88,7 @@ export default function Index() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="text-center lg:text-left">
-              <div className="inline-block px-3 py-1 bg-slate-900 text-white text-xs font-medium mb-6 rounded-full anim-fade-up delay-1">
+              <div className="inline-block px-3 py-1 bg-[#2A6363] text-white text-xs font-medium mb-6 rounded-full anim-fade-up delay-1">
                 Privacy-First Compliance Monitoring
               </div>
 
@@ -98,100 +98,150 @@ export default function Index() {
                 Clear safety & compliance.
               </h1>
 
-              <p className="text-xl text-slate-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0 anim-fade-up delay-3">
+              <p className="text-xl text-slate-600/80 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0 anim-fade-up delay-3">
                 Wall-mounted sensor that continuously tracks adult and child counts and turns them into compliance dashboards and audit-ready reports.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-4 anim-fade-up delay-4">
-                <button className="w-full sm:w-auto px-6 py-3 bg-slate-900 text-white text-sm font-semibold hover:bg-slate-800 transition-all rounded flex items-center justify-center gap-2">
+                <a href="/pilot" className="w-full sm:w-auto px-6 py-3 bg-[#2A6363] text-white text-sm font-semibold hover:bg-[#1D4E4E] transition-all rounded flex items-center justify-center gap-2">
                   Request a Pilot
                   <ArrowRight className="w-4 h-4" />
-                </button>
-                <button className="w-full sm:w-auto px-6 py-3 border-2 border-slate-200 text-slate-900 text-sm font-semibold hover:border-slate-900 transition-all rounded">
+                </a>
+                {/* <button className="w-full sm:w-auto px-6 py-3 border-2 border-[#2A6363]/30 text-[#2A6363] text-sm font-semibold hover:border-[#2A6363] hover:bg-[#2A6363]/5 transition-all rounded">
                   Book a Demo
-                </button>
+                </button> */}
               </div>
             </div>
 
-            {/* Dashboard Preview - Like Ahrefs/Mixpanel */}
-            <div className="lg:justify-self-end lg:mr-0 lg:pr-0">
-              <div className="relative lg:-mr-6 anim-fade-up-float delay-3">
-                <div className="absolute -inset-6 bg-gradient-to-r from-slate-200/40 via-slate-300/40 to-slate-200/40 blur-2xl opacity-70" />
+            {/* Dashboard Preview - Large Format */}
+            <div className="lg:col-span-1 lg:justify-self-end w-full max-w-xl lg:max-w-none lg:-mr-8">
+              <div className="relative anim-fade-up-float delay-3">
+                <div className="absolute -inset-8 bg-gradient-to-r from-[#2A6363]/20 via-[#3D7A7A]/20 to-[#2A6363]/20 blur-3xl opacity-70" />
 
-                <div className="relative bg-white rounded-xl shadow-2xl border border-slate-200 overflow-hidden">
+                <div className="relative bg-white rounded-2xl shadow-2xl border border-[#2A6363]/10 overflow-hidden min-w-[420px]">
                   {/* Top bar */}
-                  <div className="px-5 py-4 border-b border-slate-100 flex items-center justify-between">
+                  <div className="px-5 py-3 border-b border-slate-100 flex items-center justify-between bg-slate-50/50">
                     <div className="flex items-center gap-3">
-                      <div className="flex items-center gap-2">
-                        <div className="w-2.5 h-2.5 rounded-full bg-slate-200" />
-                        <div className="w-2.5 h-2.5 rounded-full bg-slate-200" />
-                        <div className="w-2.5 h-2.5 rounded-full bg-slate-200" />
+                      <div className="flex items-center gap-1.5">
+                        <div className="w-3 h-3 rounded-full bg-red-400" />
+                        <div className="w-3 h-3 rounded-full bg-amber-400" />
+                        <div className="w-3 h-3 rounded-full bg-emerald-400" />
                       </div>
-                      <div className="hidden sm:block text-sm font-semibold text-slate-900">Compliance Overview</div>
+                      <div className="text-sm font-semibold text-[#2D2D2D]">Live Dashboard</div>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <div className="flex items-center gap-2 text-xs text-emerald-600 bg-emerald-50 px-2 py-1 rounded">
-                        <div className="w-1.5 h-1.5 bg-emerald-600 rounded-full animate-pulse" />
+                    <div className="flex items-center gap-3">
+                      <div className="flex items-center gap-2 text-xs text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full font-medium">
+                        <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" />
                         Live
                       </div>
-                      <div className="hidden sm:flex items-center gap-2 text-xs text-slate-500">
+                      <div className="flex items-center gap-1.5 text-xs text-slate-400">
                         <Clock className="w-3.5 h-3.5" />
-                        Updated 3s ago
+                        3s ago
                       </div>
                     </div>
                   </div>
 
-                  <div className="p-5">
-                    {/* KPI row */}
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                      <div className="bg-slate-50 rounded-lg p-4 border border-slate-100">
-                        <div className="text-xs font-medium text-slate-500 mb-2">Spaces Monitored</div>
-                        <div className="text-3xl font-bold text-slate-900">8</div>
-                      </div>
-                      <div className="bg-slate-50 rounded-lg p-4 border border-slate-100">
-                        <div className="text-xs font-medium text-slate-500 mb-2">Checks Today</div>
-                        <div className="text-3xl font-bold text-slate-900">10,080</div>
-                      </div>
-                      <div className="bg-slate-50 rounded-lg p-4 border border-slate-100 sm:col-span-1 col-span-2">
-                        <div className="flex items-center justify-between">
-                          <div>
-                            <div className="text-xs font-medium text-slate-500 mb-2">Compliance</div>
-                            <div className="text-3xl font-bold text-slate-900">100%</div>
-                          </div>
-                          <div className="flex items-center gap-2 text-sm font-semibold text-emerald-600">
-                            <TrendingUp className="w-4 h-4" />
-                            Stable
-                          </div>
+                  <div className="p-4">
+                    {/* KPI Cards Row */}
+                    <div className="grid grid-cols-4 gap-3 mb-4">
+                      <div className="bg-white rounded-xl p-3 border border-slate-200 shadow-sm">
+                        <div className="flex items-center gap-2 text-[10px] font-bold text-slate-500 mb-1 uppercase tracking-wide">
+                          <Users className="w-3 h-3" />
+                          Adults
                         </div>
+                        <div className="text-xl font-bold text-[#2D2D2D]">11</div>
+                      </div>
+                      <div className="bg-white rounded-xl p-3 border border-slate-200 shadow-sm">
+                        <div className="flex items-center gap-2 text-[10px] font-bold text-slate-500 mb-1 uppercase tracking-wide">
+                          <Users className="w-3 h-3" />
+                          Children
+                        </div>
+                        <div className="text-xl font-bold text-[#2D2D2D]">61</div>
+                      </div>
+                      <div className="bg-white rounded-xl p-3 border border-slate-200 shadow-sm">
+                        <div className="flex items-center gap-2 text-[10px] font-bold text-slate-500 mb-1 uppercase tracking-wide">
+                          <Check className="w-3 h-3" />
+                          Compliant
+                        </div>
+                        <div className="text-xl font-bold text-[#2D2D2D]">4/4</div>
+                      </div>
+                      <div className="bg-white rounded-xl p-3 border border-slate-200 shadow-sm">
+                        <div className="flex items-center gap-2 text-[10px] font-bold text-slate-500 mb-1 uppercase tracking-wide">
+                          <TrendingUp className="w-3 h-3" />
+                          Weekly
+                        </div>
+                        <div className="text-xl font-bold text-emerald-600">98.5%</div>
                       </div>
                     </div>
 
-                    {/* Rooms list */}
-                    <div className="mt-5 bg-slate-50 rounded-lg border border-slate-100 overflow-hidden">
-                      <div className="px-4 py-3 border-b border-slate-100 flex items-center justify-between">
-                        <div className="text-xs font-semibold text-slate-600">LIVE SPACES</div>
-                        <div className="text-xs text-slate-500">Required ratio vs current</div>
+                    {/* Live Occupancy Table */}
+                    <div className="bg-white rounded-xl border border-slate-200 overflow-hidden mb-4">
+                      <div className="px-4 py-2 border-b border-slate-100 flex items-center gap-2">
+                        <Clock className="w-3.5 h-3.5 text-slate-400" />
+                        <span className="text-xs font-semibold text-[#2D2D2D]">Live Occupancy</span>
+                      </div>
+                      
+                      {/* Table Header */}
+                      <div className="grid grid-cols-12 gap-2 px-4 py-2 bg-slate-50/80 border-b border-slate-100 text-[10px] font-bold text-slate-500 uppercase tracking-wide">
+                        <div className="col-span-3">Room</div>
+                        <div className="col-span-3 text-center">Ratio (Req / Now)</div>
+                        <div className="col-span-3 text-center">Unattended</div>
+                        <div className="col-span-3 text-right">Status</div>
+                      </div>
+                      
+                      {/* Table Rows */}
+                      <div className="divide-y divide-slate-100">
+                        {[
+                          { name: 'Infant Room A', required: '1:4', current: '1:3', unattended: '–', status: 'Compliant' },
+                          { name: 'Toddler Room B', required: '1:5', current: '1:5', unattended: '–', status: 'Compliant' },
+                          { name: 'Pre-K Room C', required: '1:10', current: '1:9', unattended: '–', status: 'Watch' },
+                        ].map((room) => (
+                          <div key={room.name} className="grid grid-cols-12 gap-2 px-4 py-2 items-center hover:bg-slate-50/50 transition-colors">
+                            <div className="col-span-3 text-xs font-medium text-[#2D2D2D]">{room.name}</div>
+                            <div className="col-span-3 text-center">
+                              <span className="text-[10px] text-slate-500">Req: {room.required}</span>
+                              <span className="text-[10px] text-slate-400 mx-1">/</span>
+                              <span className="text-xs font-semibold text-[#2D2D2D]">{room.current}</span>
+                            </div>
+                            <div className="col-span-3 text-center">
+                              <span className="inline-flex items-center px-2 py-0.5 bg-emerald-50 rounded text-xs text-slate-500 font-medium">{room.unattended}</span>
+                            </div>
+                            <div className="col-span-3 text-right">
+                              <span className={`inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full text-[10px] font-medium ${
+                                room.status === 'Compliant' 
+                                  ? 'bg-emerald-50 text-emerald-700' 
+                                  : 'bg-amber-50 text-amber-700'
+                              }`}>
+                                {room.status === 'Compliant' && <Check className="w-2.5 h-2.5" />}
+                                {room.status === 'Watch' && <AlertCircle className="w-2.5 h-2.5" />}
+                                {room.status}
+                              </span>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Recent Activity */}
+                    <div className="bg-white rounded-xl border border-slate-200 overflow-hidden">
+                      <div className="px-4 py-2 border-b border-slate-100">
+                        <span className="text-xs font-semibold text-[#2D2D2D]">Recent Activity</span>
                       </div>
                       <div className="divide-y divide-slate-100">
                         {[
-                          { name: 'Classroom A', required: '4:1', current: '4:1' },
-                          { name: 'Playground', required: '5:1', current: '5:1' },
-                          { name: 'Cafeteria', required: '8:1', current: '7.5:1' },
-                        ].map((room) => (
-                          <div key={room.name} className="px-4 py-3 flex items-center justify-between">
+                          { time: '2:45 PM', event: 'Adult entered Infant Room A', change: '+1 adult' },
+                          { time: '2:38 PM', event: 'Child pickup from Toddler Room B', change: '-1 child' },
+                        ].map((activity, i) => (
+                          <div key={i} className="px-4 py-2 flex items-center justify-between">
                             <div className="flex items-center gap-3">
-                              <div className="w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center">
-                                <Check className="w-4 h-4 text-emerald-600" strokeWidth={2.5} />
-                              </div>
-                              <div>
-                                <div className="text-sm font-semibold text-slate-900">{room.name}</div>
-                                <div className="text-xs text-slate-500">Compliant</div>
-                              </div>
+                              <span className="text-[10px] text-slate-400 w-12">{activity.time}</span>
+                              <span className="text-xs text-slate-600 truncate max-w-[180px]">{activity.event}</span>
                             </div>
-                            <div className="text-right">
-                              <div className="text-xs text-slate-500">Req: {room.required}</div>
-                              <div className="text-sm font-semibold text-slate-900">Now: {room.current}</div>
-                            </div>
+                            <span className={`text-[10px] font-medium ${
+                              activity.change.includes('+') ? 'text-emerald-600' :
+                              activity.change.includes('-') ? 'text-slate-500' :
+                              'text-emerald-600'
+                            }`}>{activity.change}</span>
                           </div>
                         ))}
                       </div>
@@ -199,19 +249,15 @@ export default function Index() {
                   </div>
                 </div>
               </div>
-
-              <div className="text-center mt-6">
-                <p className="text-sm text-slate-500">Sample Dashboard • Real-time data from your facilities</p>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Trust Badge */}
-      <section className="py-12 px-6 bg-white border-y border-slate-100">
+      <section className="py-12 px-6 bg-[#FAF8F5] border-y border-[#2A6363]/10">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-block px-6 py-3 bg-slate-900 rounded-xl">
+          <div className="inline-block px-6 py-3 bg-[#2D2D2D] rounded-xl">
             <p className="text-lg md:text-xl font-bold text-white">
               Trusted by 400+ safety and compliance focused facilities nationwide
             </p>
@@ -220,11 +266,11 @@ export default function Index() {
       </section>
 
       {/* Product Models - Two Column */}
-      <section id="product" className="py-24 px-6 bg-white">
+      <section id="product" className="py-24 px-6 bg-[#FAF8F5]">
       <div className="max-w-screen-xl mx-auto">
         <div className="mb-12 text-center">
-          <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-slate-900">
-            Choose <span className="text-slate-400">wired or wireless.</span>
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-[#2D2D2D]">
+            Choose <span className="text-[#2A6363]">wired or wireless.</span>
           </h2>
         </div>
 
@@ -232,7 +278,7 @@ export default function Index() {
           {/* Wired Model */}
           <div className="flex flex-col">
             <div className="group relative rounded-3xl overflow-hidden cursor-pointer shadow-2xl h-[300px] md:h-[340px]">
-              <div className="absolute inset-0 bg-slate-900">
+              <div className="absolute inset-0 bg-[#2D2D2D]">
                 <img 
                   src="/rgbSensor.jpeg" 
                   alt="Wired Installation" 
@@ -244,10 +290,10 @@ export default function Index() {
                 WIRED
               </div>
               
-              <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 bg-gradient-to-t from-slate-900 via-slate-900/10 to-transparent">
+              <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 bg-gradient-to-t from-[#2D2D2D] via-[#2D2D2D]/10 to-transparent">
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Model S</h3>
 
-                <button className="inline-flex items-center gap-2 w-fit px-4 py-2 bg-white text-slate-900 text-sm font-semibold rounded-lg hover:bg-slate-100 transition-colors">
+                <button className="inline-flex items-center gap-2 w-fit px-4 py-2 bg-white text-[#2D2D2D] text-sm font-semibold rounded-lg hover:bg-[#2A6363] hover:text-white transition-colors">
                   Book a Demo
                   <ArrowRight className="w-4 h-4" />
                 </button>
@@ -288,9 +334,9 @@ export default function Index() {
           {/* Wireless Model */}
           <div className="flex flex-col">
             <div className="group relative rounded-3xl overflow-hidden cursor-pointer shadow-2xl h-[300px] md:h-[340px]">
-              <div className="absolute inset-0 bg-slate-800">
+              <div className="absolute inset-0 bg-[#3A3A3A]">
                 <img 
-                  src="/cam3.jpg" 
+                  src="/lorawan.png" 
                   alt="Wireless Installation" 
                   className="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
                 />
@@ -300,10 +346,10 @@ export default function Index() {
                 WIRELESS
               </div>
               
-              <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 bg-gradient-to-t from-slate-900 via-slate-900/10 to-transparent">
+              <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 bg-gradient-to-t from-[#2D2D2D] via-[#2D2D2D]/10 to-transparent">
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Model A</h3>
 
-                <button className="inline-flex items-center gap-2 w-fit px-4 py-2 bg-white text-slate-900 text-sm font-semibold rounded-lg hover:bg-slate-100 transition-colors">
+                <button className="inline-flex items-center gap-2 w-fit px-4 py-2 bg-white text-[#2D2D2D] text-sm font-semibold rounded-lg hover:bg-[#2A6363] hover:text-white transition-colors">
                   Book a Demo
                   <ArrowRight className="w-4 h-4" />
                 </button>
@@ -345,12 +391,12 @@ export default function Index() {
     </section>
 
       {/* Solutions Section */}
-      <section id="solutions" className="py-24 px-6 bg-gradient-to-b from-slate-50 to-white">
+      <section id="solutions" className="py-24 px-6 bg-gradient-to-b from-[#F0EFEB] to-[#FAF8F5]">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight text-slate-900">
-              One device. <span className="text-slate-400">Every space.</span>
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight text-[#2D2D2D]">
+              One device. <span className="text-[#2A6363]">Every space.</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
               LiveSitter Mini deploys across classrooms and activity areas to detect unattended children, monitor adult-child ratios, and flag safety risks in real time.
@@ -368,14 +414,14 @@ export default function Index() {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
             {/* Center-Based Childcare Card */}
             <div className="solution-card group relative rounded-2xl overflow-hidden h-[320px] cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl" style={{ animationDelay: '0ms' }}>
-              <div className="absolute inset-0 bg-slate-900">
+              <div className="absolute inset-0 bg-[#2D2D2D]">
                 <img 
                   src="/solutions-childcare.png" 
                   alt="Center-Based Childcare" 
                   className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700"
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#2D2D2D] via-[#2D2D2D]/50 to-transparent" />
               
               {/* Shimmer effect - auto loops */}
               <div className="absolute inset-0 shimmer-auto" style={{ animationDelay: '0s' }} />
@@ -400,14 +446,14 @@ export default function Index() {
 
             {/* K-5 Elementary Schools Card */}
             <div className="solution-card group relative rounded-2xl overflow-hidden h-[320px] cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl" style={{ animationDelay: '100ms' }}>
-              <div className="absolute inset-0 bg-slate-900">
+              <div className="absolute inset-0 bg-[#2D2D2D]">
                 <img 
                   src="/solutions-school.png" 
                   alt="K-5 Elementary Schools" 
                   className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700"
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#2D2D2D] via-[#2D2D2D]/50 to-transparent" />
               
               {/* Shimmer effect - auto loops */}
               <div className="absolute inset-0 shimmer-auto" style={{ animationDelay: '1.5s' }} />
@@ -432,14 +478,14 @@ export default function Index() {
 
             {/* Swimming Facilities Card */}
             <div className="solution-card group relative rounded-2xl overflow-hidden h-[320px] cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl" style={{ animationDelay: '200ms' }}>
-              <div className="absolute inset-0 bg-slate-900">
+              <div className="absolute inset-0 bg-[#2D2D2D]">
                 <img 
                   src="/solutions-pool.png" 
                   alt="Swimming Facilities" 
                   className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700"
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#2D2D2D] via-[#2D2D2D]/50 to-transparent" />
               
               {/* Shimmer effect - auto loops */}
               <div className="absolute inset-0 shimmer-auto" style={{ animationDelay: '3s' }} />
@@ -464,14 +510,14 @@ export default function Index() {
 
             {/* Government Card */}
             <div className="solution-card group relative rounded-2xl overflow-hidden h-[320px] cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl" style={{ animationDelay: '300ms' }}>
-              <div className="absolute inset-0 bg-slate-900">
+              <div className="absolute inset-0 bg-[#2D2D2D]">
                 <img 
                   src="/solutions-school.png" 
                   alt="Government Facilities" 
                   className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700"
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#2D2D2D] via-[#2D2D2D]/50 to-transparent" />
               
               {/* Shimmer effect - auto loops */}
               <div className="absolute inset-0 shimmer-auto" style={{ animationDelay: '4.5s' }} />
@@ -501,7 +547,7 @@ export default function Index() {
             <p className="text-slate-600 mb-6">
               Don't see your industry? Our sensors work in any environment that requires people counting.
             </p>
-            <button className="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-800 transition-colors">
+            <button className="inline-flex items-center gap-2 px-6 py-3 bg-[#2A6363] text-white text-sm font-semibold rounded-lg hover:bg-[#1D4E4E] transition-colors">
               Talk to Our Team
               <ArrowRight className="w-4 h-4" />
             </button>
@@ -510,7 +556,7 @@ export default function Index() {
       </section>
 
       {/* Audit Reports Section */}
-      <section className="py-24 px-6 bg-slate-50">
+      <section className="py-24 px-6 bg-[#F0EFEB]">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
@@ -552,20 +598,20 @@ export default function Index() {
               </div>
             </div>
 
-            <div className="bg-white rounded-xl p-6 shadow-lg border border-slate-200">
-              <div className="flex items-center justify-between mb-6 pb-4 border-b border-slate-100">
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-[#2A6363]/10">
+              <div className="flex items-center justify-between mb-6 pb-4 border-b border-[#2A6363]/10">
                 <div className="text-sm font-semibold">Compliance Report</div>
-                <button className="text-xs font-medium text-slate-600 hover:text-slate-900 flex items-center gap-1.5">
+                <button className="text-xs font-medium text-[#2A6363] hover:text-[#1D4E4E] flex items-center gap-1.5">
                   <Download className="w-3.5 h-3.5" />
                   Export PDF
                 </button>
               </div>
 
               <div className="space-y-4">
-                <div className="bg-slate-50 rounded-lg p-4">
-                  <div className="text-xs text-slate-500 mb-2">January 20-26, 2026</div>
+                <div className="bg-[#2A6363]/5 rounded-lg p-4">
+                  <div className="text-xs text-[#2A6363] mb-2">January 20-26, 2026</div>
                   <div className="flex items-baseline gap-2">
-                    <div className="text-3xl font-bold text-slate-900">100%</div>
+                    <div className="text-3xl font-bold text-[#2D2D2D]">100%</div>
                     <div className="text-sm text-emerald-600 font-medium">Compliant</div>
                   </div>
                 </div>
@@ -589,7 +635,7 @@ export default function Index() {
                   </div>
                 </div>
 
-                <div className="pt-4 border-t border-slate-100">
+                <div className="pt-4 border-t border-[#2A6363]/10">
                   <div className="text-xs font-medium text-slate-500 mb-2">RECENT ACTIVITY</div>
                   <div className="space-y-2">
                     <div className="text-xs text-slate-600 flex items-center gap-2">
@@ -609,22 +655,19 @@ export default function Index() {
       </section>
 
       {/* Technology Section */}
-      <section id="technology" className="py-24 px-6 bg-white">
+      <section id="technology" className="py-24 px-6 bg-[#FAF8F5]">
         <div className="max-w-6xl mx-auto">
           <div className="mb-16 text-center">
-            <div className="inline-block px-3 py-1 bg-slate-100 text-slate-700 text-sm font-medium mb-4 rounded">
-              Privacy-First Technology
-            </div>
-            <h2 className="text-4xl md:text-5xl font-semibold mb-4 tracking-tight">Why edge sensors matter</h2>
+            <h2 className="text-4xl md:text-5xl font-semibold mb-4 tracking-tight">Privacy-First by Design</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              All processing happens on-device. No video ever leaves your facility.
+              All processing happens on-device. No video is stored or transmitted outside your facility.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-slate-50 rounded-xl p-8 border border-slate-100">
-              <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-6 shadow-sm">
-                <Lock className="w-6 h-6 text-slate-700" strokeWidth={2} />
+            <div className="bg-white rounded-xl p-8 border border-[#2A6363]/10 shadow-sm">
+              <div className="w-12 h-12 bg-[#2A6363]/10 rounded-lg flex items-center justify-center mb-6">
+                <Lock className="w-6 h-6 text-[#2A6363]" strokeWidth={2} />
               </div>
               <h3 className="text-lg font-semibold mb-3">Zero video streaming</h3>
               <p className="text-slate-600 leading-relaxed">
@@ -632,9 +675,9 @@ export default function Index() {
               </p>
             </div>
 
-            <div className="bg-slate-50 rounded-xl p-8 border border-slate-100">
-              <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-6 shadow-sm">
-                <Shield className="w-6 h-6 text-slate-700" strokeWidth={2} />
+            <div className="bg-white rounded-xl p-8 border border-[#2A6363]/10 shadow-sm">
+              <div className="w-12 h-12 bg-[#2A6363]/10 rounded-lg flex items-center justify-center mb-6">
+                <Shield className="w-6 h-6 text-[#2A6363]" strokeWidth={2} />
               </div>
               <h3 className="text-lg font-semibold mb-3">FERPA & COPPA compliant</h3>
               <p className="text-slate-600 leading-relaxed">
@@ -642,9 +685,9 @@ export default function Index() {
               </p>
             </div>
 
-            <div className="bg-slate-50 rounded-xl p-8 border border-slate-100">
-              <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-6 shadow-sm">
-                <Zap className="w-6 h-6 text-slate-700" strokeWidth={2} />
+            <div className="bg-white rounded-xl p-8 border border-[#2A6363]/10 shadow-sm">
+              <div className="w-12 h-12 bg-[#2A6363]/10 rounded-lg flex items-center justify-center mb-6">
+                <Zap className="w-6 h-6 text-[#2A6363]" strokeWidth={2} />
               </div>
               <h3 className="text-lg font-semibold mb-3">Works offline</h3>
               <p className="text-slate-600 leading-relaxed">
@@ -663,7 +706,7 @@ export default function Index() {
 
       {/* ----------------EXTRA---------------- */}
       {/* Quick Setup Highlights */}
-      <section className="bg-slate-900 text-white">
+      <section className="bg-[#2D2D2D] text-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
           <div className="grid md:grid-cols-3 gap-10 text-center">
             <div>
@@ -806,12 +849,12 @@ export default function Index() {
       </section> */}
 
       {/* Footer */}
-      <footer className="bg-white border-t border-slate-200 py-12 px-6">
+      <footer className="bg-[#FAF8F5] border-t border-[#2A6363]/10 py-12 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-7 h-7 bg-slate-900 rounded flex items-center justify-center">
+                <div className="w-7 h-7 bg-[#2A6363] rounded flex items-center justify-center">
                   <span className="text-white font-bold text-sm">L</span>
                 </div>
                 <span className="font-semibold">Livesitter Mini</span>
@@ -823,29 +866,29 @@ export default function Index() {
             <div>
               <h4 className="font-semibold mb-3">Product</h4>
               <ul className="space-y-2 text-sm text-slate-600">
-                <li><a href="#" className="hover:text-slate-900 transition-colors">Features</a></li>
-                <li><a href="#" className="hover:text-slate-900 transition-colors">Pricing</a></li>
-                <li><a href="#" className="hover:text-slate-900 transition-colors">Case Studies</a></li>
+                <li><a href="#" className="hover:text-[#2A6363] transition-colors">Features</a></li>
+                <li><a href="#" className="hover:text-[#2A6363] transition-colors">Pricing</a></li>
+                <li><a href="#" className="hover:text-[#2A6363] transition-colors">Case Studies</a></li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-3">Solutions</h4>
               <ul className="space-y-2 text-sm text-slate-600">
-                <li><a href="#" className="hover:text-slate-900 transition-colors">Schools</a></li>
-                <li><a href="#" className="hover:text-slate-900 transition-colors">Pools</a></li>
-                <li><a href="#" className="hover:text-slate-900 transition-colors">Childcare</a></li>
+                <li><a href="#" className="hover:text-[#2A6363] transition-colors">Schools</a></li>
+                <li><a href="#" className="hover:text-[#2A6363] transition-colors">Pools</a></li>
+                <li><a href="#" className="hover:text-[#2A6363] transition-colors">Childcare</a></li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-3">Company</h4>
               <ul className="space-y-2 text-sm text-slate-600">
-                <li><a href="#" className="hover:text-slate-900 transition-colors">About</a></li>
-                <li><a href="#" className="hover:text-slate-900 transition-colors">Privacy</a></li>
-                <li><a href="#" className="hover:text-slate-900 transition-colors">Contact</a></li>
+                <li><a href="#" className="hover:text-[#2A6363] transition-colors">About</a></li>
+                <li><a href="#" className="hover:text-[#2A6363] transition-colors">Privacy</a></li>
+                <li><a href="#" className="hover:text-[#2A6363] transition-colors">Contact</a></li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-slate-200 pt-8 text-sm text-slate-500 text-center">
+          <div className="border-t border-[#2A6363]/10 pt-8 text-sm text-slate-500 text-center">
             © 2026 Livesitter Mini. All rights reserved.
           </div>
         </div>
@@ -898,7 +941,7 @@ export default function Index() {
           opacity: 0.75;
           will-change: transform;
           mix-blend-mode: multiply;
-          background: radial-gradient(circle at 30% 30%, rgba(148, 163, 184, 0.65), rgba(248, 250, 252, 0));
+          background: radial-gradient(circle at 30% 30%, rgba(42, 99, 99, 0.35), rgba(248, 250, 252, 0));
         }
 
         .hero-ambient-1 {
@@ -916,7 +959,7 @@ export default function Index() {
           top: 90px;
           opacity: 0.6;
           filter: blur(44px);
-          background: radial-gradient(circle at 60% 40%, rgba(100, 116, 139, 0.35), rgba(248, 250, 252, 0));
+          background: radial-gradient(circle at 60% 40%, rgba(42, 99, 99, 0.20), rgba(248, 250, 252, 0));
           animation: ambientDrift2 22s ease-in-out infinite;
         }
 
@@ -1041,7 +1084,7 @@ export default function Index() {
         }
 
         .ambient-glow {
-          background: radial-gradient(circle, rgba(100, 116, 139, 0.15) 0%, transparent 70%);
+          background: radial-gradient(circle, rgba(42, 99, 99, 0.10) 0%, transparent 70%);
           filter: blur(40px);
           animation: ambientPulse 6s ease-in-out infinite;
         }
