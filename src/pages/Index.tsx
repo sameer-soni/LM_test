@@ -55,7 +55,7 @@ export default function Index() {
   }, [selectedModel]);
 
   return (
-    <div className="bg-[#FAF8F5] text-[#1A1A1A]">
+    <div className="bg-[#FAF8F5] text-[#1A1A1A] overflow-x-hidden">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#FAF8F5]/95 backdrop-blur-sm border-b border-[#2A6363]/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-4 flex items-center justify-between">
@@ -108,7 +108,7 @@ export default function Index() {
       </nav>
 
       {/* Hero Section with Dashboard Preview */}
-      <section className="relative pt-32 pb-20 pl-6 pr-6 lg:pr-0 bg-gradient-to-b from-[#FAF8F5] to-[#F0EFEB]">
+      <section className="relative pt-32 pb-20 px-6 bg-gradient-to-b from-[#FAF8F5] to-[#F0EFEB] overflow-hidden">
         {/* Ambient background motion (decorative) */}
         <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
           <div className="hero-ambient hero-ambient-1" />
@@ -144,7 +144,7 @@ export default function Index() {
             </div>
 
             {/* Dashboard Preview - Large Format */}
-            <div className="lg:col-span-1 lg:justify-self-end w-full max-w-xl lg:max-w-none lg:-mr-8">
+            <div className="lg:col-span-1 lg:justify-self-end w-full max-w-xl lg:max-w-none">
               <div className="relative anim-fade-up-float delay-3">
                 <div className="absolute -inset-8 bg-gradient-to-r from-[#2A6363]/20 via-[#3D7A7A]/20 to-[#2A6363]/20 blur-3xl opacity-70" />
 
